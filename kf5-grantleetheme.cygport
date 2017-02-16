@@ -1,0 +1,25 @@
+inherit kf5
+
+NAME="kf5-grantleetheme"
+VERSION=16.08.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE Grantlee theme support library"
+DESCRIPTION="GrantleeTheme library provides a class for loading theme packages
+containing set of templates."
+
+PKG_NAMES="libKF5GrantleeTheme5 libKF5GrantleeTheme-devel"
+libKF5GrantleeTheme5_CONTENTS="
+	etc/xdg/grantleetheme.categories
+	usr/bin/cygKF5GrantleeTheme-5.dll
+	usr/lib/grantlee/5.1/kde_grantlee_plugin.dll
+	usr/share/doc/${NAME}/
+"
+libKF5GrantleeTheme_devel_REQUIRES="libgrantlee5-devel"
+libKF5GrantleeTheme_devel_CONTENTS="
+	usr/include/KF5/GrantleeTheme/
+	usr/include/KF5/grantleetheme_version.h
+	usr/lib/cmake/KF5GrantleeTheme/
+	usr/lib/libKF5GrantleeTheme.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_GrantleeTheme.pri
+"
